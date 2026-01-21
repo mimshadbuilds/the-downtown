@@ -7,7 +7,8 @@ export default {
         primary: '#000', 
         secondary: '#fff', 
         accent: '#f59e0b',
-        blink: '#111111', 
+        blink: '#111111',
+        ylo: '#e6e6e0', 
       },
       fontFamily: {
         sans: ['Arial', 'sans-serif'], 
