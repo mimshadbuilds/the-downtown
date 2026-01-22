@@ -12,39 +12,35 @@ function App() {
     <main className='container mx-auto px-4 py-6'>
       <SectionIndex title='The Latest' />
       <TopSlider />
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 lg:gap-6 mt-2 md:mt-4'>
-        {/* left column */}
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 lg:gap-6 -mt-2 md:-mt-4'>
+        
         <div className='flex flex-col gap-2 md:gap-4 lg:gap-6'>
           <NewsCard 
           type='left-sidebar' 
-          img={true} 
+          imgUrl= "https://www.mensfitness.com/.image/c_fill,w_1200,h_900,g_faces:center/MTk2MTM2NDE0NDczMTAyODUz/man-doing-pilates.jpg" 
           title='Unconventional Workout That Torch Fat And Sculpt Muscle of Indigenous'
-          detail='That Torch Fat And Sculpt Muscle'
            />
            <NewsCard 
             type='left-sidebar'
-            img={true}
-            title="Millions of Indonesians May Lose Voting Rights: Alliance"
-            detail='People May Lose Voting Rights' 
+            imgUrl="https://img.jakpost.net/c/2018/03/16/2018_03_16_42368_1521170859._large.jpg"
+            title="Millions of Indonesians May Lose Voting Rights: Alliance" 
            />
            <NewsCard
            type='left-sidebar'
-           img={true}
+           imgUrl="http://maatimaa.com/wp-content/uploads/2025/02/fashion3.jpg"
            title="Crisomeini Dwi Putri, RI's Track Cycling Athlete for Asian Games"
-           detail="Track Cycling Athlete for Asian Games"
            />
            <NewsCard
             type='left-sidebar'
-            img={true}
+            imgUrl="https://img.jakpost.net/c/2018/02/23/2018_02_23_41156_1519365781._large.jpg"
             title="President Joko “Jokowi” Widodo Refuses to Sign MD3 Law"
-            detail= 'Refuses to Sign MD3 Law'
            />
         </div>
         
-        {/* middle column */}  
+          
           <NewsCard
             type='middle-column'
-            img={true}
+            imgUrl="https://images2.imgbox.com/39/22/zr8k86T3_o.jpg"
             category="POLITICS"
             title="'Election was rigged' says opposition, police confirm three dead"
             detail="When we get out of the glass bottle of our ego and when we escape like the squirrels in the..."
@@ -52,11 +48,11 @@ function App() {
             btnText="READ MORE"
           />
 
-          {/* right column */}
+          
           <div className='flex flex-col gap-2 md:gap-4 lg:gap-6'>
             <NewsCard
             category="OPINION"
-            img={true}
+            imgUrl="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80"
             type='right-sidebar'
             title="Democratic Party politician calls Prabowo 'cardboard general'"
             detail="Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life..."
@@ -64,7 +60,7 @@ function App() {
            />
            <NewsCard
             category="LIFESTYLE"
-            img={true}
+            imgUrl="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=600&q=80"
             type='right-sidebar'
             title="Google tracks location data even when users turn service off"
             detail="Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life..."
