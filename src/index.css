@@ -4,8 +4,14 @@
 
 @layer base {
     body {
-        @apply bg-gray-100 font-sans text-primary;
-      }    
+        @apply bg-[#f9f9f7] font-sans text-primary;
+        min-height: 100vh;
+      }
+      
+      img {
+        max-width: 100%;
+        height: auto;
+      } 
 }
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
