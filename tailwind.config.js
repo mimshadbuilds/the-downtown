@@ -8,7 +8,7 @@ export default {
         secondary: '#fff', 
         accent: '#f59e0b',
         blink: '#111111',
-        ylo: '#e6e6e0',
+        yellowish: '#e6e6e0',
         sliderBg: '#f0f9ff',
         blueish: '#3b82f6',
         pinkish: '#ec4899',
