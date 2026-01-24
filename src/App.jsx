@@ -72,7 +72,7 @@ const sideNews = [
     title: 'Grab tackles Jakarta’s odd-even license plate policy with special algorithm',
     category: 'Culture',
     imgUrl:
-      'https://images2.imgbox.com/79/1d/LP9y0wc2_o.jpg',
+      'https://images2.imgbox.com/df/c1/hYicqyS4_o.jpg',
   },
   {
     title: 'Jokowi supporters try to prevent anti-Jokowi activist from entering Batam',
