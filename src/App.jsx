@@ -36,23 +36,23 @@ const opinionItems = [
 const topSliderItems = [
   {
     title: 'The chases new smartphone startups',
-    image:
-      '',
+    imgUrl:
+      'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=500&q=80',
   },
   {
     title: 'Presidential trials new travel destinations',
-    image:
-      '',
+    imgUrl:
+      'https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&w=500&q=80',
   },
   {
     title: 'A digital media startup growing with millennials',
-    image:
-      '',
+    imgUrl:
+      'https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=500&q=80',
   },
   {
     title: 'Presidential trials new travel destinations',
-    image:
-      '',
+    imgUrl:
+      'https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&w=500&q=80',
   },
 ]
 
@@ -61,7 +61,7 @@ const mainNews = {
   category: 'Politics',
   detail:
     'When we get out of the glass bottle of our ego and when we escape like the squirrels in the wheel...',
-  image:
+  imgUrl:
     "https://images2.imgbox.com/39/22/zr8k86T3_o.jpg",
   author: 'John Doe',
   date: 'February 17, 2020',
@@ -71,15 +71,15 @@ const sideNews = [
   {
     title: 'Grab tackles Jakarta’s odd-even license plate policy with special algorithm',
     category: 'Culture',
-    image:
-      '',
+    imgUrl:
+      'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=700&q=80',
     date: 'February 18, 2020',
   },
   {
     title: 'Jokowi supporters try to prevent anti-Jokowi activist from entering Batam',
     category: 'Lifestyle',
-    image:
-      '',
+    imgUrl:
+      'https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=700&q=80',
     date: 'February 18, 2020',
   },
 ]
@@ -89,8 +89,8 @@ const featuredNews = {
   category: 'Opinion',
   detail:
     'Even the all-powerful plotting has no control about the blind tests. It is an almost unorthographic life...',
-  image:
-    '',
+  imgUrl:
+    'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80',
   author: 'John Doe',
   date: 'August 10, 2018',
 }
@@ -101,8 +101,8 @@ const sidebarNews = [
     category: 'Lifestyle',
     detail:
       'Even the all-powerful plotting has no control about the blind tests.',
-    image:
-      '',
+    imgUrl:
+      'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=600&q=80',
     author: 'John Doe',
     date: 'August 14, 2018',
   },
@@ -113,10 +113,8 @@ const App = () => {
 
   return (
     <div className='min-h-screen bg-white text-blink'>
-    <Header />
-    
+    <Header />  
     <main className='container mx-auto px-4 py-6'>
-      <TopSlider />
       <div className="grid gap-10 lg:grid-cols-[240px_minmax(0,1fr)_300px] md:grid-cols-[220px_minmax(0,1fr)]">
         <section className='space-y-6'>
           <SectionIndex title='The Latest' />
@@ -132,7 +130,7 @@ const App = () => {
         <SectionIndex title='Opinion' />
           <ul className='space-y-3 text-sm leading-relaxed text-neutral-700'>
             {opinionItems.map((item) => (
-              <li key={item} className='border-b border-yellowish pb-3'>
+              <li key={item} className='border-b border-yelloish pb-3'>
                 <a className='transition-colors hover:text-blink' href="#">
                   {item}
                 </a>
@@ -152,15 +150,15 @@ const App = () => {
           </div>
         </section>
 
-        <section className='space-y-6 md-col-span-2 lg:col-span-1'>
-          <NewsCard type='sidebar' {...featuredNews} />
+        <aside className='space-y-6 md-col-span-2 lg:col-span-1'>
+          <NewsCard type='right-sidebar' {...featuredNews} />
           <div className='space-y-6'>
             {sidebarNews.map((items) => (
-              <NewsCard key={items.title} type='sidebar' {...items} />
+              <NewsCard key={items.title} type='right-sidebar' {...items} />
             )
             )}
           </div>
-        </section>
+        </aside>
       </div>
     </main>
     </div>
