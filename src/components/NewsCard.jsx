@@ -32,7 +32,7 @@ const NewsCard = ({ type ='mini', imgUrl, category, title, detail, author, date 
                         {category}
                     </span>
                 </div>
-                <div className="relative z-10 -mt-10 bg-white px-4 pb-4 pt-3 sm:px-6 sm:pb-6 sm:pt-5 sm:mx-6 sm:-mt-14 sm:border sm:border-yelloish">
+                <div className="relative z-10 mt-0 bg-white px-4 pb-4 pt-4 sm:px-6 sm:pb-6 sm:pt-5 sm:mx-6 sm:-mt-14 sm:border sm:border-yelloish">
                     <h3 className={`text-2xl font-semibold leading-tight ${titleClass} sm:text-2xl md:text-3xl`}>
                     {title}
                     </h3>

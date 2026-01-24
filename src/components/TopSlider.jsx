@@ -15,7 +15,7 @@ const TopSlider = ({ items }) => {
         return () => clearInterval(interval);
     }, [items.length])
 
-    useEffect(() => {
+    useEffect(() => {               //incomplete
         const slides = refSlider.current?.querySelectorAll('[slider-data]')
         if (slides?.[currentSlider]){
             slides[currentSlider].scrollIntoView({ behavior: 'smooth',
@@ -37,18 +37,18 @@ const TopSlider = ({ items }) => {
     let btnStyles = 'flex h-9 w-9 flex-shrink-0 items-center justify-center border border-yelloish text-lg text-neutral-600 transition-colors hover:bg-neutral-50 hover:text-blink sm:h-10 sm:w-10' 
 
     return (
-        <section className="border-b border-yelloish bg-white px-3 py-3 sm:px-4">
+        <section className="rounded border border-yelloish bg-white px-3 py-3 shadow-sm sm:rounded-none sm:border-0 sm:border-b sm:px-4 sm:shadow-none">
             <div className="flex items-center gap-2">
                 <button className={btnStyles} onClick={handlePrev}>‹</button>
                 <div
                     ref={refSlider}
-                    className="flex flex-1 items-stretch gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide sm:gap-5 sm:overflow-hidden"
+                    className="flex flex-1 items-stretch gap-3 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide sm:gap-5 sm:overflow-hidden"
                 >
                     {items.map((item) => (
                         <article
                             key={item.title}
                             slider-data
-                            className="flex flex-none basis-1/2 items-center gap-3 snap-start py-1 sm:basis-1/3 lg:basis-1/3"
+                            className="flex flex-none basis-full items-center gap-3 snap-start py-1 sm:basis-1/3"
                         >
                             <div className="h-11 w-11 flex-shrink-0 overflow-hidden bg-neutral-200 sm:h-12 sm:w-12">
                                 <img src={item.imgUrl} alt="" className="h-full w-full object-cover" loading="lazy" />

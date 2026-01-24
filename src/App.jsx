@@ -72,14 +72,13 @@ const sideNews = [
     title: 'Grab tackles Jakarta’s odd-even license plate policy with special algorithm',
     category: 'Culture',
     imgUrl:
-      'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=700&q=80',
-    date: 'February 18, 2020',
+      'https://images2.imgbox.com/79/1d/LP9y0wc2_o.jpg',
   },
   {
     title: 'Jokowi supporters try to prevent anti-Jokowi activist from entering Batam',
     category: 'Lifestyle',
     imgUrl:
-      'https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=700&q=80',
+      'https://images2.imgbox.com/79/1d/LP9y0wc2_o.jpg',
     date: 'February 18, 2020',
   },
 ]
@@ -90,7 +89,7 @@ const featuredNews = {
   detail:
     'Even the all-powerful plotting has no control about the blind tests. It is an almost unorthographic life...',
   imgUrl:
-    'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80',
+    'https://images2.imgbox.com/45/a7/jvo8zGQE_o.jpg',
   author: 'John Doe',
   date: 'August 10, 2018',
 }
@@ -102,7 +101,7 @@ const sidebarNews = [
     detail:
       'Even the all-powerful plotting has no control about the blind tests.',
     imgUrl:
-      'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=600&q=80',
+      'https://images2.imgbox.com/b1/9c/PF9wkhyb_o.jpg',
     author: 'John Doe',
     date: 'August 14, 2018',
   },
