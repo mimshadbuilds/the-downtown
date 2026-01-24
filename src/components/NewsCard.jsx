@@ -104,7 +104,27 @@ const NewsCard = ({type='mini', imgUrl, category, title, detail, author, date}) 
         categoryClass = 'bg-accent'
     }
 
-    
+    return (
+        <article className="space-y-3 border-b border-yelloish pb-4">
+            <div className="overflow-hidden bg-neutral-200">
+                <img src={imgUrl} alt="" className="h-40 w-full object-cover" loading="lazy" 
+                />
+            </div>
+            <div className="space-y-2"> 
+                <p className={categoryClass}>{category}</p>
+                <h3 className={`text-base font-semibold leading-snug ${titleClass}`}>{title}
+                </h3>
+                {detail ? (
+                    <p className="text-sm text-neutral-600">{detail}</p>
+                ) : null}
+                {date ? (
+                    <div className="text-[0.7rem] text-neutral-500 uppercase">
+                        {date}
+                    </div> 
+                ) : null}
+            </div>
+        </article>
+    )
 }
 
 export default NewsCard;

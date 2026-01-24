@@ -1,7 +1,7 @@
-export default function SectionIndex({title, className = ''}) {
+export default function SectionIndex({ title }) {
     return (
         <div className="border-b border-yellowish pb-2">
-            <h2 className={`text-2xl font-semibold mb-4 ${className}`}>
+            <h2 className="text-sm font-semibold uppercase text-blink">
             {title}
             </h2>
         </div>
