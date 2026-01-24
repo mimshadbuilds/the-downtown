@@ -14,7 +14,7 @@ export default {
         pinkish: '#ec4899',
       },
       fontFamily: {
-        sans: ['Arial', 'sans-serif'], 
+        sans: ['Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
       },
     },
   },

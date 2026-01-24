@@ -5,7 +5,6 @@ import TopSlider from './components/TopSlider'
 
 const latestNews = [
   {
-    type: 'left-sidebar',
     imgUrl: "https://www.mensfitness.com/.image/c_fill,w_1200,h_900,g_faces:center/MTk2MTM2NDE0NDczMTAyODUz/man-doing-pilates.jpg",
     title: 'Unconventional Workout That Torch Fat And Sculpt Muscle of Indigenous'
   },
@@ -24,6 +23,7 @@ const latestNews = [
 ]
 
 const opinionItems = [
+
   '▶ Tour showcases shared art history of Indonesia and Singapore',
   '▶ Finland Has An Education System The Other Country Should Learn From',
   '▶ Country Should Learn From',
@@ -114,11 +114,11 @@ const App = () => {
   return (
     <div className='min-h-screen bg-white text-blink'>
     <Header />  
-    <main className='container mx-auto px-4 py-6'>
-      <div className="grid gap-10 lg:grid-cols-[240px_minmax(0,1fr)_300px] md:grid-cols-[220px_minmax(0,1fr)]">
+    <main className='mx-auto max-w-7xl px-4 py-6 sm:px-6 sm:py-8'>
+      <div className="grid gap-8 md:grid-cols-[220px_minmax(0,1fr)] lg:grid-cols-[240px_minmax(0,1fr)_300px]">
         <section className='space-y-6'>
           <SectionIndex title='The Latest' />
-          <div className='space-y-4'>
+          <div className='space-y-6'>
             {latestNews.map((news) => (
               <NewsCard key={news.title}
               type='left-sidebar'
@@ -150,7 +150,7 @@ const App = () => {
           </div>
         </section>
 
-        <aside className='space-y-6 md-col-span-2 lg:col-span-1'>
+        <aside className='space-y-6 md:col-span-2 lg:col-span-1'>
           <NewsCard type='right-sidebar' {...featuredNews} />
           <div className='space-y-6'>
             {sidebarNews.map((items) => (
