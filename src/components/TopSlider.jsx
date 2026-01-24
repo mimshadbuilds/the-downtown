@@ -1,39 +1,65 @@
-import NewsCard from "./NewsCard";
+import { useState, useRef } from "react";
+import { useEffect } from "react";
 
-export default function TopSlider() {
-    let btnStyles = "flex-shrink-0 text-gray-500 hover:text-black text-xl md:text-2xl";
+const TopSlider = ({ items }) => {
+    const refSlider = useRef(null);
+    const [currentSlider, setCurrentSlider] = useState(0)
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentSlider((prev) => 
+            prev >= items.length - 1 ? 0 
+            : prev + 1 
+        ) 
+        }, 4500)
+        return () => clearInterval(interval);
+    }, [items.length])
+
+    useEffect(() => {
+        const slides = refSlider.current?.querySelectorAll('[slider-data]')
+        if (slides?.[currentSlider]){
+            slides[currentSlider].scrollIntoView({ behavior: 'smooth',
+                block: 'nearest',
+                inline: 'start',
+            })
+        }
+
+    }, [currentSlider])
+
+    const handlePrev = () => {
+        setCurrentSlider((prev) => (prev <= 0 ? items.length - 1 : prev - 1))
+      }
+
+    const handleNext = () => {
+        setCurrentSlider((prev) => (prev >= items.length - 1 ? 0 : prev + 1))
+    }
+
+    let btnStyles = 'hidden h-10 w-10 flex-shrink-0 items-center justify-center border border-line text-lg text-neutral-600 transition-colors hover:bg-neutral-50 hover:text-blink sm:flex' 
+
     return (
-        <section className="bg-sliderBg">
-            <div className="flex items-center gap-2 md:gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide px-0 md:px-0">
-                <button className={btnStyles}>&lt;</button>
-                 
-                <NewsCard
-                 type='top-slider'
-                 imgUrl='https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=500&q=80'
-                 title="Indonesia To Offer Infrastructure Projects At IMF-World Bank Meeting"
-                />
-                <NewsCard 
-                 type="top-slider"
-                 imgUrl=''
-                />
-                <NewsCard  
-                 type="top-slider"
-                 imgUrl="https://en.people.cn/mediafile/pic/BIG/20230914/45/3482817653402677945.png"
-                 title="The Chinese smartphone upstarts taking on Apple and Samsung"
-                />
-                <NewsCard  
-                 type="top-slider"
-                 imgUrl="https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iCIUTpL2msZo/v1/-1x-1.webp"
-                 title="A Digital Media Startup Growing Up With Millennial Women"
-                />
-                <NewsCard  
-                 type="top-slider"
-                 imgUrl="https://news.mbcslu.com/wp-content/uploads/2020/03/news9.jpg"
-                 title="Ngurah Rai International Airport To Close For 24 Hours For Nyepi"
-                />
+        <section className="bg-sliderBg border border-yelloish px-3 py-3 sm:px-4">
+            <div className="flex items-center gap-2">
+                <button className={btnStyles} onClick={handlePrev}>‹ </button>
 
-                <button className={btnStyles}>&gt;</button>
+                <div ref={refSlider} className="flex flex-1 gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar">
+                    {items.map((item) => (
+                        <article key={item.title} slider-data
+                        className="flex flex-1 gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar">
+                            <div className="h-14 w-14 flex-shrink-0 overflow-hidden bg-neutral-200">
+                                <img src={item.imgUrl} alt="" className="h-full w-full object-cover" loading="lazy" />
+                            </div>
+                            <div className="min-w-0 flex-1">
+                                <h3 className="text-xs font-medium leading-snug text-blink">
+                                {item.title}
+                                </h3>
+                            </div>
+                        </article>
+                    ))}
+                </div>
+                <button className={btnStyles} onClick={handleNext}>›</button>
             </div>
         </section>
     )
 }
+
+export default TopSlider;
