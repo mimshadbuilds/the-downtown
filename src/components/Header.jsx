@@ -5,8 +5,8 @@ export default function Header() {
     return (
         <header className="bg-white border-b border-yelloish">
             <div className='max-w-7xl mx-auto px-3 py-3 sm:px-4 sm:py-4 md:px-6 md:py-5'>
-              <div className="flex items-center justify-between md:justify-center">
-                <button className="text-xl sm:text-2xl md:hidden">☰</button>
+              <div className="relative flex items-center justify-center">
+                <button className="absolute left-0 text-xl sm:text-2xl md:hidden">☰</button> 
                 <img
                   src={logo}
                   alt="The Downtown"

@@ -37,7 +37,7 @@ const TopSlider = ({ items }) => {
     let btnStyles = 'flex h-8 w-8 flex-shrink-0 items-center justify-center border border-yelloish text-base text-neutral-600 transition-colors hover:bg-neutral-50 hover:text-blink sm:h-9 sm:w-9 sm:text-lg md:h-10 md:w-10'
 
     return (
-        <section className="rounded border border-yelloish bg-white px-2 py-2 shadow-sm sm:rounded-none sm:border-0 sm:border-b sm:px-3 sm:py-3 sm:shadow-none md:px-4">
+        <section className="border border-yelloish bg-white px-2 py-2 shadow-md sm:rounded-none sm:border-0 sm:border-b sm:px-3 sm:py-3 md:px-4 md:shadow-none">
             <div className="flex items-center gap-1.5 sm:gap-2">
                 <button className={btnStyles} onClick={handlePrev}>‹</button>
                 <div

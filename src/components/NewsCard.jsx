@@ -25,14 +25,14 @@ const NewsCard = ({ type ='mini', imgUrl, category, title, detail, author, date 
 
     if (type === 'featured') {
         return (
-            <article className="w-full border border-yelloish bg-white overflow-hidden">
+            <article className="w-full border border-yelloish bg-white overflow-hidden shadow-md">
                 <div className="relative w-full bg-neutral-200 overflow-hidden">
                     <img src={imgUrl} alt="" className="h-48 w-full object-cover sm:h-64 md:h-80 lg:h-96" loading="lazy" />
-                    <span className="absolute bottom-2 left-3 inline-block text-[0.6rem] font-semibold uppercase text-white sm:bottom-3 sm:left-6 sm:text-[0.65rem]">
+                    <span className="absolute bottom-2 left-3 inline-block text-[0.6rem] font-semibold uppercase text-gray-500 sm:bottom-3 sm:left-6 sm:text-[0.65rem]">
                         {category}
                     </span>
                 </div>
-                <div className="relative z-10 w-full bg-white px-3 pb-4 pt-3 sm:px-6 sm:pb-6 sm:pt-5 md:mx-6 md:-mt-10 md:border md:border-yelloish md:w-auto">
+                <div className="relative z-10 w-full bg-white px-3 pb-4 pt-3 sm:px-6 sm:pb-6 sm:pt-5 md:mx-6 md:-mt-10  md:w-auto">
                     <h3 className={`text-base font-semibold leading-tight ${titleClass} sm:text-xl md:text-2xl lg:text-3xl`}>
                     {title}
                     </h3>
@@ -46,7 +46,7 @@ const NewsCard = ({ type ='mini', imgUrl, category, title, detail, author, date 
                         <span>0</span>
                     </div>
                     <p className="mt-2 text-xs leading-relaxed text-neutral-600 sm:mt-4 sm:text-sm">{detail}</p>
-                    <button className="mt-3 w-fit border border-blink px-3 py-1.5 text-[0.65rem] uppercase text-blink transition-colors hover:bg-blink hover:text-white sm:mt-4 sm:px-4 sm:py-2 sm:text-[0.7rem]">
+                    <button className="mt-3 w-fit border border-yelloish px-3 py-1.5 text-[0.65rem] uppercase text-blink transition-colors hover:bg-blink hover:text-white sm:mt-4 sm:px-4 sm:py-2 sm:text-[0.7rem]">
                     READ MORE
                     </button>
                 </div>
@@ -56,7 +56,7 @@ const NewsCard = ({ type ='mini', imgUrl, category, title, detail, author, date 
 
     if (type === 'right-sidebar') {
         return (
-            <article className="w-full space-y-2 overflow-hidden sm:space-y-3">
+            <article className="w-full overflow-hidden bg-white shadow-md">
                 <div className="w-full overflow-hidden bg-neutral-200">
                 <img
                     src={imgUrl}
@@ -65,7 +65,7 @@ const NewsCard = ({ type ='mini', imgUrl, category, title, detail, author, date 
                     loading="lazy"
                 />
                 </div>
-                <div className="space-y-1.5 sm:space-y-2">
+                <div className="space-y-1.5 p-3 sm:space-y-2 sm:p-4">
                 <p className={categoryClass}>{category}</p>
                 <h3 className={`text-sm font-semibold leading-snug ${titleClass} sm:text-base md:text-lg`}>
                     {title}
@@ -102,12 +102,12 @@ const NewsCard = ({ type ='mini', imgUrl, category, title, detail, author, date 
     }
 
     return (
-        <article className="w-full space-y-2 overflow-hidden border-b border-yelloish pb-3 sm:space-y-3 sm:pb-4">
+        <article className="w-full overflow-hidden bg-white shadow-md">
             <div className="w-full overflow-hidden bg-neutral-200">
                 <img src={imgUrl} alt="" className="h-36 w-full object-cover sm:h-40 md:h-44" loading="lazy" 
                 />
             </div>
-            <div className="space-y-1.5 text-center sm:space-y-2"> 
+            <div className="space-y-1.5 p-3 text-center sm:space-y-2 sm:p-4"> 
                 <span className="inline-block text-[0.6rem] font-semibold uppercase text-neutral-500 sm:text-[0.65rem]">
                     {category}
                 </span>
