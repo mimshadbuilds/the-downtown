@@ -111,13 +111,13 @@ const sidebarNews = [
 const App = () => {
 
   return (
-    <div className='min-h-screen bg-white text-blink'>
+    <div className='min-h-screen bg-[#f9f9f7] text-blink'>
     <Header />  
-    <main className='mx-auto max-w-7xl px-4 py-6 sm:px-6 sm:py-8'>
-      <div className="grid gap-8 md:grid-cols-[220px_minmax(0,1fr)] lg:grid-cols-[240px_minmax(0,1fr)_300px]">
-        <section className='space-y-6'>
+    <main className='mx-auto w-full max-w-7xl overflow-hidden px-3 py-4 sm:px-4 sm:py-6 md:px-6 md:py-8'>
+      <div className="grid gap-5 sm:gap-6 md:grid-cols-[200px_minmax(0,1fr)] md:gap-7 lg:grid-cols-[240px_minmax(0,1fr)_280px] lg:gap-8">
+        <section className='hidden space-y-5 md:block md:space-y-6'>
           <SectionIndex title='The Latest' />
-          <div className='space-y-6'>
+          <div className='space-y-4'>
             {latestNews.map((news) => (
               <NewsCard key={news.title}
               type='left-sidebar'
@@ -127,9 +127,9 @@ const App = () => {
           </div>
 
         <SectionIndex title='Opinion' />
-          <ul className='space-y-3 text-sm leading-relaxed text-neutral-700'>
+          <ul className='space-y-2.5 text-xs leading-relaxed text-neutral-700 sm:text-sm'>
             {opinionItems.map((item) => (
-              <li key={item} className='border-b border-yelloish pb-3'>
+              <li key={item} className='border-b border-yelloish pb-2.5'>
                 <a className='transition-colors hover:text-blink' href="#">
                   {item}
                 </a>
@@ -138,10 +138,10 @@ const App = () => {
           </ul>
         </section>
 
-        <section className='space-y-8'>
+        <section className='min-w-0 space-y-5 sm:space-y-6 md:space-y-7'>
           <TopSlider items={topSliderItems} />
           <NewsCard type='featured' {...mainNews} />
-          <div className='grid gap-6 sm:grid-cols-2'>
+          <div className='grid gap-5 sm:grid-cols-2 sm:gap-6'>
             {sideNews.map((item) => (
               <NewsCard key={item.title} {...item} />
             )
@@ -149,9 +149,9 @@ const App = () => {
           </div>
         </section>
 
-        <aside className='space-y-6 md:col-span-2 lg:col-span-1'>
+        <aside className='min-w-0 space-y-5 sm:space-y-6 md:col-span-2 lg:col-span-1'>
           <NewsCard type='right-sidebar' {...featuredNews} />
-          <div className='space-y-6'>
+          <div className='space-y-5 sm:space-y-6'>
             {sidebarNews.map((items) => (
               <NewsCard key={items.title} type='right-sidebar' {...items} />
             )

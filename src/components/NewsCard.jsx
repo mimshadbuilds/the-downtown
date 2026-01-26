@@ -25,18 +25,18 @@ const NewsCard = ({ type ='mini', imgUrl, category, title, detail, author, date 
 
     if (type === 'featured') {
         return (
-            <article className="border border-yelloish bg-white">
-                <div className="relative aspect-[16/9] w-full sm:aspect-[16/8] bg-neutral-200 overflow-hidden">
-                    <img src={imgUrl} alt="" className="h-64 w-full object-cover sm:h-80 md:h-96" loading="lazy" />
-                    <span className="absolute bottom-3 left-6 inline-block text-[0.65rem] font-semibold uppercase text-white">
+            <article className="w-full border border-yelloish bg-white overflow-hidden">
+                <div className="relative w-full bg-neutral-200 overflow-hidden">
+                    <img src={imgUrl} alt="" className="h-48 w-full object-cover sm:h-64 md:h-80 lg:h-96" loading="lazy" />
+                    <span className="absolute bottom-2 left-3 inline-block text-[0.6rem] font-semibold uppercase text-white sm:bottom-3 sm:left-6 sm:text-[0.65rem]">
                         {category}
                     </span>
                 </div>
-                <div className="relative z-10 mt-0 bg-white px-4 pb-4 pt-4 sm:px-6 sm:pb-6 sm:pt-5 sm:mx-6 sm:-mt-14 sm:border sm:border-yelloish">
-                    <h3 className={`text-2xl font-semibold leading-tight ${titleClass} sm:text-2xl md:text-3xl`}>
+                <div className="relative z-10 w-full bg-white px-3 pb-4 pt-3 sm:px-6 sm:pb-6 sm:pt-5 md:mx-6 md:-mt-10 md:border md:border-yelloish md:w-auto">
+                    <h3 className={`text-base font-semibold leading-tight ${titleClass} sm:text-xl md:text-2xl lg:text-3xl`}>
                     {title}
                     </h3>
-                    <div className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-2 text-xs text-neutral-500">
+                    <div className="mt-2 flex flex-wrap items-center gap-x-1.5 gap-y-1 text-[0.65rem] text-neutral-500 sm:mt-4 sm:gap-x-2 sm:text-xs">
                         <span className="italic text-neutral-400">by</span>
                         <span className="font-semibold uppercase text-neutral-600">{author}</span>
                         <span className="text-neutral-400">and 1 others</span>
@@ -45,9 +45,9 @@ const NewsCard = ({ type ='mini', imgUrl, category, title, detail, author, date 
                         <span className="text-neutral-400">·</span>
                         <span>0</span>
                     </div>
-                    <p className="mt-4 text-sm leading-relaxed text-neutral-600">{detail}</p>
-                    <button className="mt-4 w-fit border border-blink px-4 py-2 text-[0.7rem] uppercase text-blink transition-colors hover:bg-blink hover:text-white">
-                    Read More
+                    <p className="mt-2 text-xs leading-relaxed text-neutral-600 sm:mt-4 sm:text-sm">{detail}</p>
+                    <button className="mt-3 w-fit border border-blink px-3 py-1.5 text-[0.65rem] uppercase text-blink transition-colors hover:bg-blink hover:text-white sm:mt-4 sm:px-4 sm:py-2 sm:text-[0.7rem]">
+                    READ MORE
                     </button>
                 </div>
             </article>
@@ -56,24 +56,26 @@ const NewsCard = ({ type ='mini', imgUrl, category, title, detail, author, date 
 
     if (type === 'right-sidebar') {
         return (
-            <article className="space-y-3">
-                <div className="overflow-hidden bg-neutral-200">
+            <article className="w-full space-y-2 overflow-hidden sm:space-y-3">
+                <div className="w-full overflow-hidden bg-neutral-200">
                 <img
                     src={imgUrl}
                     alt=""
-                    className="h-48 w-full object-cover"
+                    className="h-44 w-full object-cover sm:h-48 md:h-56"
                     loading="lazy"
                 />
                 </div>
-                <div className="space-y-2">
+                <div className="space-y-1.5 sm:space-y-2">
                 <p className={categoryClass}>{category}</p>
-                <h3 className={`text-lg font-semibold leading-snug ${titleClass}`}>
+                <h3 className={`text-sm font-semibold leading-snug ${titleClass} sm:text-base md:text-lg`}>
                     {title}
                 </h3>
-                <p className="text-sm text-neutral-600">{detail}</p>
-                <div className="text-[0.7rem] uppercase text-neutral-500">
-                    {author} · {date}
+                {detail && <p className="text-xs text-neutral-600 sm:text-sm">{detail}</p>}
+                {(author || date) && (
+                <div className="text-[0.65rem] uppercase text-neutral-500 sm:text-[0.7rem]">
+                    {author} {author && date && '·'} {date}
                 </div>
+                )}
                 </div>
             </article>
         )
@@ -81,8 +83,8 @@ const NewsCard = ({ type ='mini', imgUrl, category, title, detail, author, date 
 
     if (type === 'left-sidebar') {
         return (
-        <article className="flex gap-2 xs:flex-row xs:gap-3 border-b border-yelloish pb-3"> 
-            <div className="h-14 w-16 flex-shrink-0 overflow-hidden bg-neutral-200">
+        <article className="flex w-full gap-2 overflow-hidden border-b border-yelloish pb-2.5 sm:gap-3 sm:pb-3"> 
+            <div className="h-12 w-14 flex-shrink-0 overflow-hidden bg-neutral-200 sm:h-14 sm:w-16">
             <img
                 src={imgUrl}
                 alt=""
@@ -90,8 +92,8 @@ const NewsCard = ({ type ='mini', imgUrl, category, title, detail, author, date 
                 loading="lazy"
             />
             </div>
-            <div className="space-y-1">
-                <h3 className={`text-sm font-semibold leading-snug ${titleClass}`}>
+            <div className="min-w-0 flex-1 space-y-0.5">
+                <h3 className={`text-xs font-semibold leading-snug ${titleClass} sm:text-sm`}>
                     {title}
                 </h3>
             </div>
@@ -100,22 +102,22 @@ const NewsCard = ({ type ='mini', imgUrl, category, title, detail, author, date 
     }
 
     return (
-        <article className="space-y-3 border-b border-yelloish pb-4">
-            <div className="overflow-hidden bg-neutral-200">
-                <img src={imgUrl} alt="" className="h-40 w-full object-cover" loading="lazy" 
+        <article className="w-full space-y-2 overflow-hidden border-b border-yelloish pb-3 sm:space-y-3 sm:pb-4">
+            <div className="w-full overflow-hidden bg-neutral-200">
+                <img src={imgUrl} alt="" className="h-36 w-full object-cover sm:h-40 md:h-44" loading="lazy" 
                 />
             </div>
-            <div className="space-y-2 text-center"> 
-                <span className="inline-block text-[0.65rem] font-semibold uppercase text-neutral-500">
+            <div className="space-y-1.5 text-center sm:space-y-2"> 
+                <span className="inline-block text-[0.6rem] font-semibold uppercase text-neutral-500 sm:text-[0.65rem]">
                     {category}
                 </span>
-                <h3 className={`text-base font-semibold leading-snug ${titleClass}`}>{title}
+                <h3 className={`text-sm font-semibold leading-snug ${titleClass} sm:text-base`}>{title}
                 </h3>
                 {detail ? (
-                    <p className="text-sm text-neutral-600">{detail}</p>
+                    <p className="text-xs text-neutral-600 sm:text-sm">{detail}</p>
                 ) : null}
                 {date ? (
-                    <div className="text-[0.7rem] text-neutral-500 uppercase">
+                    <div className="text-[0.65rem] text-neutral-500 uppercase sm:text-[0.7rem]">
                         {date}
                     </div> 
                 ) : null}
