@@ -126,16 +126,18 @@ const App = () => {
             ))}
           </div>
 
-        <SectionIndex title='Opinion' />
-          <ul className='space-y-2.5 text-xs leading-relaxed text-neutral-700 sm:text-sm'>
-            {opinionItems.map((item) => (
-              <li key={item} className='border-b border-yelloish pb-2.5'>
-                <a className='transition-colors hover:text-blink' href="#">
-                  {item}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <div className='bg-white p-4 shadow-md md:p-5'>
+            <SectionIndex title='Opinion' />
+            <ul className='mt-4 space-y-0 text-xs leading-relaxed text-neutral-700 md:mt-5 sm:text-sm'>
+              {opinionItems.map((item) => (
+                <li key={item} className='border-b border-yelloish pb-2.5 mb-2.5 last:border-b-0 last:mb-0'>
+                  <a className='block transition-colors hover:text-blink' href="#">
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </section>
 
         <section className='min-w-0 space-y-5 sm:space-y-6 md:space-y-7'>
