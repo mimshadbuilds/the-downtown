@@ -2,7 +2,8 @@
 
 A responsive news/magazine template built with **React 19 + Vite**, styled with **Tailwind CSS**. Features a modern layout with hero slider, reusable components, and fast performance. Live at [the-downtown-dun.vercel.app](https://the-downtown-dun.vercel.app/)
 
-![Project screenshot](public/screenshot.png)
+![Project screenshot](<img width="3308" height="2348" alt="IMG-20260127-WA0000" src="https://github.com/user-attachments/assets/d69f3f53-ca07-4ceb-b45a-99d19fce4369" />).
+
 
 ## Main Technologies (Stack)
 
@@ -86,11 +87,3 @@ npm run preview
 
 - **🌐 Live Demo:** https://the-downtown-dun.vercel.app/
 - **📦 Repository:** https://github.com/mimshadbuilds/the-downtown
-
-## Notes & Suggestions
-
-- 📸 Add a nice screenshot at `public/screenshot.png` and keep the README image reference so GitHub displays it automatically.
-- 💬 Add small READMEs or comments for complex components (e.g., `src/components/NewsCard.jsx`) to ease customization.
-- ♿ Improve SEO and accessibility by reviewing alt text and semantic HTML tags.
-- 👥 Consider adding `CONTRIBUTING.md` to guide external contributors.
-- 🎨 Replace placeholder images with local assets where appropriate, and credit external sources when required (Unsplash, imgbox, etc.).
