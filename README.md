@@ -1,8 +1,8 @@
 # The Downtown
 
-A responsive news/magazine template built with **React 19 + Vite**, styled with **Tailwind CSS**. Features a modern layout with hero slider, reusable components, and fast performance. Live at [the-downtown-dun.vercel.app](https://the-downtown-dun.vercel.app/)
+A responsive news/magazine template built with **React 19 + Vite**, styled with **Tailwind CSS**. Features a modern layout with hero slider, reusable components, and fast performance. Live at [the-dow[...]
 
-![Project screenshot](<img width="3308" height="2348" alt="IMG-20260127-WA0000" src="https://github.com/user-attachments/assets/d69f3f53-ca07-4ceb-b45a-99d19fce4369" />).
+![Project screenshot](public/screenshot.png)
 
 
 ## Main Technologies (Stack)
