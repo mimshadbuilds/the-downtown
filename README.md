@@ -2,7 +2,7 @@
 
 A responsive news/magazine template built with **React 19 + Vite**, styled with **Tailwind CSS**. Features a modern layout with hero slider, reusable components, and fast performance. Live at [the-dow[...]
 
-![Project screenshot](public/screenshot.png)
+<img width="3308" height="2348" alt="IMG-20260127-WA0000" src="https://github.com/user-attachments/assets/0d04d783-6735-423e-b862-34d51df7fa02" />
 
 
 ## Main Technologies (Stack)
